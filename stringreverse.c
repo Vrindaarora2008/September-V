@@ -12,20 +12,6 @@ int main()
         reversedStr[i] = str[length - i - 1];
     }
     reversedStr[length] = '\0'; 
-    for (int i=0;i<length;i++) 
-    {
-        if (str[i]!=reversedStr[i]) 
-        {
-            Palindrome = 0;
-            break;
-        }
-    }
-    if (Palindrome) 
-    {
-        printf("The string '%s' is a palindrome.\n", str);
-    } else 
-    {
-        printf("The string '%s' is not a palindrome.\n", str);
-    }
+        printf("%s\n" ,reversedStr);
     return 0;
 }
