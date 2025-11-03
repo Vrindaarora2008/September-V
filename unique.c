@@ -8,18 +8,18 @@ int main()
     printf("The array is-");
     for(int i=0;i<n;i++)
     {
-        scanf("%i", &arr[i]);
+        scanf("%d", &arr[i]);
         printf(" ");
     }
-    int count=0;
     for(int i=0;i<n;i++)
     {
-        for(int j=0;j<i;j++)
+        int count=0;
+        for(int j=0;j<n;j++)
         {
-        if(arr[i]==arr[j])
+        if(i!=j && arr[i]==arr[j])
         {
             count++;
-            printf("Duplicate count is-%d", &count);
+            break;
         }
         }
      if(count==0)
@@ -27,6 +27,10 @@ int main()
             printf("These numbers have no duplicate-");
             printf(" ");
             printf("%d\n", arr[i]);
+        }
+        else
+        {
+            printf("Duplicated %d\n", arr[i]);
         }
     }
     return 0;
